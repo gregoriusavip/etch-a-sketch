@@ -3,7 +3,7 @@ const CONTAINER = document.querySelector("#container");
 const button = document.querySelector("button");
 const CONTAINER_SIZE = 720;
 let gridSize = 16; // Squares per side of the grid, default 16
-let colorOpacity = 0.0;
+let colorOpacity = 0.1;
 
 CONTAINER.style.width = CONTAINER_SIZE.toString() + "px";
 CONTAINER.style.height = CONTAINER_SIZE.toString() + "px";
@@ -40,13 +40,14 @@ button.addEventListener("click", () => {
     gridSize = 16;
   }
   CONTAINER.textContent = "";
-  colorOpacity = 0.0;
+  colorOpacity = 0.1;
   createGrid(gridSize);
 });
 
 CONTAINER.addEventListener("mouseover", (e) => {
   targetElement = e.target;
   if (targetElement.getAttribute("class") === "grid") {
+    console.log(colorOpacity);
     targetElement.style.backgroundColor = `rgba(${getRandomInt(
       256
     )}, ${getRandomInt(256)}, ${getRandomInt(256)}, ${colorOpacity})`;
