@@ -21,7 +21,7 @@ function createGrid(size){
 
 button.addEventListener('click', () => {
     gridSize = Number(prompt('Please enter the numbers of squares per side (MAX 100)'));
-    if (gridSize > 100 || gridSize <= 0){
+    if (gridSize > 100 || gridSize <= 0 || isNaN(gridSize)){
         console.log("Invalid size.");
         gridSize = 16;
     }
