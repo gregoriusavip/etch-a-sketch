@@ -40,7 +40,7 @@ button.addEventListener("click", () => {
     gridSize = 16;
   }
   CONTAINER.textContent = "";
-  colorOpacity = 1.0;
+  colorOpacity = 0.0;
   createGrid(gridSize);
 });
 
