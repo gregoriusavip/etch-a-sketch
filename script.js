@@ -16,3 +16,10 @@ for (let i = 0; i < GRID_SIZE; i++){
         CONTAINER.appendChild(square);
     }
 }
+
+CONTAINER.addEventListener("mouseover", (e) => {
+    targetElement = e.target;
+    if(targetElement.getAttribute("class") === "grid"){
+        targetElement.style.backgroundColor = 'aquamarine';
+    }
+});
