@@ -1,7 +1,7 @@
 // Global Variables
 const CONTAINER = document.querySelector('#container');
-const GRID_SIZE = 16;
-const SQUARE_SIZE = 64;
+const GRID_SIZE = 16;   // Squares per side of the grid
+const SQUARE_SIZE = 64; // The size of each square in pixels
 const CONTAINER_SIZE = GRID_SIZE * SQUARE_SIZE;
 
 CONTAINER.style.width = CONTAINER_SIZE.toString() + "px";
