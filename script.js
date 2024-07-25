@@ -1,8 +1,7 @@
 // Global Variables
 const CONTAINER = document.querySelector('#container');
-const GRID_SIZE = 16;   // Squares per side of the grid
-const SQUARE_SIZE = 64; // The size of each square in pixels
-const CONTAINER_SIZE = GRID_SIZE * SQUARE_SIZE;
+const GRID_SIZE = 100;   // Squares per side of the grid
+const CONTAINER_SIZE = 720;
 
 CONTAINER.style.width = CONTAINER_SIZE.toString() + "px";
 CONTAINER.style.height = CONTAINER_SIZE.toString() + "px";
@@ -11,8 +10,8 @@ for (let i = 0; i < GRID_SIZE; i++){
     for (let j = 0; j < GRID_SIZE; j++){
         const square = document.createElement('div');
         square.setAttribute('class', 'grid');
-        square.style.height = SQUARE_SIZE.toString() + "px";
-        square.style.width = SQUARE_SIZE.toString() + "px";
+        square.style.height = (CONTAINER_SIZE/GRID_SIZE).toString() + "px";
+        square.style.width = (CONTAINER_SIZE/GRID_SIZE).toString() + "px";
         CONTAINER.appendChild(square);
     }
 }

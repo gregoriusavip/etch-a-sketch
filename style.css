@@ -12,5 +12,6 @@
 }
 
 #container > * {
+    flex: auto;
     border-width: 0;
 }
